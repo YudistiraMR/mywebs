@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>yudis</title>
+</head>
+<body>
+<h1>INI Home </h1>
+{% include "layout/menu.html"%}
+	<br>
+	{{nama | upper}}
+	{% for b in buah%}
+	<table border="1" cellspacing="0">
+			<td><li>>{{b}}</li></td>	
+	</table>
+	{% endfor %}
+{%if False%}
+<h3> If bernilai True,maka aku ada</h3>
+{%endif%}
+{%if False%}
+<h3>Watashi </h3>
+{%endif%}
+</body>
+</html>
