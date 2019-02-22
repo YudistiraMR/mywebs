@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render,HttpResponse
-
+from .models import Artikel
 # Create your views here.
 def index(request):
 	nama = "Yudistira"
@@ -13,4 +13,5 @@ def about(request):
 def contact(request):
 	return render(request,'layout/kontak.html')
 def blog(request):
-	return render(request,'layout/blog.html')
+	blogs = Artikel.objects.all()
+	return render(request,'layout/blog.html',{'blogs':blogs})

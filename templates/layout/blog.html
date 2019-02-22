@@ -10,9 +10,16 @@
 
     <h1>MY BLOG</h1>
     {% include  "layout/menu.html"%}
-    <li>>NAMA : Yudistira</li>
-    <li>Kelas : XI RPL 3</li>
-    <li>Hobby : Basketball</li>
-    
+
+    <ul>
+        {% for blog in blogs%}
+        <li>{{ blog.judul }} - {{ blog.tanggal }} - {{blog.penulis}</li>
+        {% endfor %}
+    </ul>
+        <article>
+            {% for blog in blogs %}
+            {{ blog.konten }}
+            {% endfor %}
+        </article>
 </body>
 </html>
