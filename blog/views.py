@@ -13,5 +13,5 @@ def about(request):
 def contact(request):
 	return render(request,'layout/kontak.html')
 def blog(request):
-	blogs = Artikel.objects.all()
+	blogs = Artikel.objects.filter(publish=True)
 	return render(request,'layout/blog.html',{'blogs':blogs})

@@ -14,7 +14,9 @@
     <ul>
         {% for blog in blogs%}
         <h3>{{ blog.judul }} </h3>
-        <li> {{ blog.tanggal }} oleh {{blog.penulis}}</li>
+        <H5>{{ blog.kategori }} - {{ blog.katergori.keterangan }}</H5>
+        <li> {{ blog.tanggal }} oleh <i> {{blog.penulis}}   </i></li>
+        <hr>
         {% endfor %}
     </ul>
 </body>
